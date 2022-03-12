@@ -1,2 +1,5 @@
 <!--pages/about/about.wxml-->
 <text class="title">pages/about/about.wxml</text>
+
+<view>2.知识点2</view>
+<text>哈哈哈哈哈</text>
