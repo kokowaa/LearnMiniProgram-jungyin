@@ -1,2 +1,11 @@
 <!--pages/about/about.wxml-->
-<text class="title">pages/about/about.wxml</text>
+<!-- 1.数据绑定 -->
+<view>Hello {{name}}</view>
+<view>我的年龄: {{age}}</view>
+
+<!-- 2.列表展示 -->
+<view wx:for="{{students}}" wx:key="id">{{item.id}}-{{item.name}}-{{item.age}}</view>
+
+<!-- 3.条件渲染 -->
+<view>当前计数: {{counter}}</view>
+<button bindtap="add">+1</button>

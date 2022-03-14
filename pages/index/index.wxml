@@ -19,5 +19,7 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取授权</button>
+    <open-data type="userNickName"></open-data>
   </view>
 </view>
