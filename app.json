@@ -1,8 +1,11 @@
 {
     "pages": [
-        "pages/index/index",
-        "pages/logs/logs",
-        "pages/about/about"
+        "pages/scroll/scroll",
+        "pages/input/input",
+        "pages/image/image",
+        "pages/view/view",
+        "pages/button/button",
+        "pages/index/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

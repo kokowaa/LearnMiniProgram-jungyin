@@ -1,0 +1,18 @@
+<!--pages/input/input.wxml-->
+<input type="text"/>
+
+<input type="text" value="哈哈哈"/>
+
+<input type="number"/>
+
+<input type="text" focus="{{true}}"/>
+
+<input type="text" password/>
+
+<input type="text" placeholder="请输入内容"/>
+
+<input type="text" confirm-type="send"/>
+
+<input type="text" bindinput="handleInput" bindfocus="handleFocus" bindblur="handleBlur"/>
+
+

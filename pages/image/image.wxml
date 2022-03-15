@@ -1,0 +1,12 @@
+<!--pages/image/image.wxml-->
+<image src="../../assets/kk.jpg"></image>
+<image bindload="handleImageLoaded" src="https://t7.baidu.com/it/u=4113083086,1494496387&fm=193&f=GIF"></image>
+
+<!-- 选择设备内图片 -->
+<button bindtap="clickChooseImg">选择图片</button>
+<!-- show-menu-by-longpress: 长按识别图片 -->
+<image show-menu-by-longpress src="{{imgUrl}}"></image>
+
+<!-- 1.bindload: 监听图片加载完成的回调函数 -->
+<!-- 2.lazy-load: 图片懒加载 -->
+<image wx:for="{{10}}" src="https://t7.baidu.com/it/u=4113083086,1494496387&fm=193&f=GIF" lazy-load="{{true}}" bindload="handleImageLoaded" ></image>

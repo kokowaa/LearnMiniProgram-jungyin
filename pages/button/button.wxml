@@ -1,0 +1,16 @@
+<!--pages/button/button.wxml-->
+<button>按钮</button>
+<!-- size -->
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+
+<!-- type -->
+<button type="primary">按钮</button>
+<button type="warn">按钮</button>
+
+<!-- plain -->
+<button plain="{{true}}">按钮</button>
+<button loading>按钮</button>
+
+<button form-type="reset">按钮</button>
+<button form-type="submit">按钮</button>
