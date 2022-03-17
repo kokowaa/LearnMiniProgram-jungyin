@@ -1,2 +1,15 @@
 <!--pages/about/about.wxml-->
-<text class="title">pages/about/about.wxml</text>
+
+<!-- 1.id/class -->
+<button id="btn" class="btn">按钮</button>
+
+<!-- 2.style 样式 -->
+<view style="border: 1px solid black;">哈哈哈哈</view>
+
+<!-- 3.hidden 隐藏 -->
+<view hidden="{{true}}">哈哈哈哈哈</view>
+
+<!-- 4.data-*  -->
+
+<!-- 5.bind/catch -->
+<view bindtap="handleBindTap" catchtap="catchTap">哈哈哈</view>
