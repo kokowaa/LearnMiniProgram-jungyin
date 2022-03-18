@@ -1,0 +1,4 @@
+<template name="switchDisplay">
+    <button>{{ btnName }}</button>
+    <view hidden="{{false}}">{{content}}</view>
+</template>

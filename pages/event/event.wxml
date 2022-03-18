@@ -1,0 +1,41 @@
+<!--pages/event/event.wxml-->
+<!-- 事件捕获处理机制 -->
+<view>
+    <button size="mini" bindtap="handleClick">按钮</button>
+    <button size="mini" bind:tap="handleClick">按钮</button>
+    <button size="mini" catch:tap="handleClick">按钮</button>
+</view>
+
+<!-- 常见的事件 -->
+<view 
+    class="box"
+    bindtouchstart="handleTouch"
+    bind:touchmove="handleMove"
+    bind:touchend="handleTouchEnd"
+    bind:tap="handleTap"
+    bind:longpress="handleLongPress"
+></view>
+
+<!-- 事件对象 -->
+<!-- <button bindtap="handleClickEvent">事件对象</button> -->
+
+<view id="outer" bind:tap="handleOuter">
+    外部的数据
+    <view id="inner" bind:tap="handleInner">
+        里面的数据
+    </view>
+</view>
+
+<!-- 事件的传递参数 -->
+<view class="container">
+    <block wx:for="{{titles}}" wx:key="*this">
+        <view class="item" bind:tap="handleItemClick" data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+    </block>
+</view>
+
+<!-- 事件捕获与事件冒泡 -->
+<view class="n1" capture-bind:tap="handleCn1" bind:tap="handleBn1">
+    <view class="n2" capture-bind:tap="handleCn2" bind:tap="handleBn2">
+        <view class="n3" capture-bind:tap="handleCn3" bind:tap="handleBn3"></view>
+    </view>
+</view>

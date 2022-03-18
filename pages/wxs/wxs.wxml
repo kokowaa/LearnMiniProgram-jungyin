@@ -1,0 +1,25 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- <wxs module="hj">
+    var a = '哈哈哈';
+    function foo() {
+        return 12 + 11
+    }
+
+    module.exports = {
+        a: a,
+        foo: foo
+    }
+</wxs> -->
+<!-- <wxs module="info">
+    var info = require('../../wxs/info.wxs')
+
+    module.exports = {
+        info: info
+    }
+</wxs> -->
+<!-- 通过wxs标签进行引入 -->
+<wxs src="/wxs/info.wxs" module="info"></wxs>
+<wxs src="/wxs/format.wxs" module="formator"></wxs>
+<view>{{ info.a }}</view>
+<view>{{ info.foo() }}</view>
+<view>{{ formator.formatPrice(price) }}</view>

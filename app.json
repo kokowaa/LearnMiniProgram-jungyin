@@ -1,5 +1,8 @@
 {
     "pages": [
+        "pages/event/event",
+        "pages/wxs/wxs",
+        "pages/mus/mus",
         "pages/index/index",
         "pages/logs/logs",
         "pages/about/about"

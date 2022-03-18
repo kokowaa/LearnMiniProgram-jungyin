@@ -1,0 +1,10 @@
+function formatPrice(price, number) {
+    if (!number) {
+        number = 2
+    }
+    return price.toFixed(number)
+}
+
+module.exports = {
+    formatPrice: formatPrice
+}

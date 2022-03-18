@@ -1,0 +1,9 @@
+var a = '哈哈哈';
+function foo() {
+    return 12 + 11
+}
+
+module.exports = {
+    a: a,
+    foo: foo
+}

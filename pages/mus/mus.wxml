@@ -1,0 +1,69 @@
+<!--pages/mus/mus.wxml-->
+<include src="/template/header"></include>
+<text>Mustache语法</text>
+
+
+<view>{{name}}</view>
+<view>{{ age>12? '成年人': '未成年人' }}</view>
+<view>{{ time }}</view>
+
+<!--  -->
+<button bindtap="handleCheckColor">切换颜色</button>
+<text style="color: {{ colord ? 'black':'red' }};" class="texti">哈哈哈哈</text>
+
+<!-- wx:if -->
+<button bindtap="handleSwitchDisplay">切换显示</button>
+<view wx:if="{{isShow}}">
+  哈哈哈哈
+</view>
+
+<!-- 成绩显示 -->
+<view wx:if="{{score > 90}}">优秀</view>
+<view wx:elif="{{score > 80}}">良好</view>
+<view wx:elif="{{score > 70}}">不错</view>
+<view wx:elif="{{score > 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hidden -->
+<!-- 
+    hidden: 页面仍然会挂载 只是设置了display: none;
+    切换频率高： hidden
+    切换频率低： wx:if
+ -->
+<view hidden="{{true}}">我是受hidden控制的属性标签</view>
+<view wx:if="{{false}}">我是受wx:if控制的属性组件</view>
+
+<!-- wx:for 遍历 -->
+<!-- <view wx:for="{{[1,2,3,4]}}">{{item}}</view>
+<view wx:for="{{'jdjdjdjdjd'}}">{{item}}</view>
+<view wx:for="{{5}}">{{item}}</view> -->
+
+<!-- wx:for-item / wx:for-index -->
+<!-- wx:key *this代表唯一key是遍历元素本身 -->
+<view 
+    wx:for="{{['星际穿越', '功夫', '后会无期']}}" 
+    wx:for-item="movie" 
+    wx:for-index="i"
+    wx:key="*this"
+>
+    {{movie}} - {{i}}
+</view>
+
+<!-- template 模板 -->
+<!-- 
+    在小程序不支持自定义组件的时候 为了复用 减少代码重复 会template使用率很高
+    template name属性为必须的
+    template 在没有使用的时候 是在页面中 不会挂在的
+ -->
+ <!-- 
+     import/include 方式引入template模板
+  -->
+<!-- <import src="../../template/template"></import> -->
+<import src="/template/template"></import>
+
+<template is="switchDisplay" data="{{ btnName: '切换显示', content: '你好啊,李银河' }}"></template>
+
+<include src="/template/footer"></include>
+
+<!-- <view>{{ (23.333333).toFixed(2) }}</view> -->
+<view>{{ numberToFixed(23.222) }}</view>
