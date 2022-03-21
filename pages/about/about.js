@@ -15,6 +15,43 @@ Page({
 
     },
 
+    showToast() {
+        wx.showToast({
+          title: '你好啊',
+          icon: 'loading',
+          mask: true
+        })
+    },
+    showModal() {
+        wx.showModal({
+          cancelColor: 'cancelColor',
+          title: '是否选择进入?',
+          content: '请您选择',
+          success: (res) => {
+            if (res.confirm) {
+                console.log('用户选择确定');
+            } else {
+                console.log('用户选择取消');
+            }
+          }
+        })
+    },
+    showLoading() {
+        wx.showLoading({
+          title: '加载ing',
+        })
+
+        // showLoading无时间限制,需要调用wx.hideLoading来进行关闭loading
+        setTimeout(() => {
+            wx.hideLoading()
+        }, 2000)
+    },
+    showAction() {
+        wx.showActionSheet({
+          itemList: ['相册', "拍照"],
+        })
+    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -60,7 +97,7 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function (option) {
 
     }
 })

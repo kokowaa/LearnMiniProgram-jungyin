@@ -1,2 +1,8 @@
 <!--pages/about/about.wxml-->
 <text class="title">pages/about/about.wxml</text>
+<button bindtap="showToast">showToast</button>
+<button bindtap="showModal">showModal</button>
+<button bindtap="showLoading">showLoading</button>
+<button bindtap="showAction">showAction</button>
+
+<button open-type="share">分享</button>
