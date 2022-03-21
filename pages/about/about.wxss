@@ -2,3 +2,14 @@
 .title {
     color: red;
 }
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.black {
+    color: black;
+}

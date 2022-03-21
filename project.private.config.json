@@ -17,6 +17,7 @@
                     "pathName": "pages/about/about",
                     "query": "",
                     "scene": null,
+                    "launchMode": "default",
                     "partialCompile": {
                         "enabled": false,
                         "pages": [

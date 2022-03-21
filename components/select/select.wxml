@@ -1,0 +1,2 @@
+<!--components/select/select.wxml-->
+<view>当前计数: {{counter}}</view>

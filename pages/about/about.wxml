@@ -1,2 +1,25 @@
 <!--pages/about/about.wxml-->
-<text class="title">pages/about/about.wxml</text>
+
+<!-- 给自定义组件传递数据/样式 -->
+<my-prop title="红红火火恍恍惚惚" titleclass="red"></my-prop>
+<my-prop title="酷酷酷" titleclass="blue"></my-prop>
+<my-prop title="啦啦啦啦啦" titleclass="black"></my-prop>
+
+<!-- 事件监听 -->
+<view>
+    <text>当前计数: {{counter}}</text>
+    <event bind:increment="increment"></event>
+</view>
+
+<!-- tab-control练习 -->
+<tab-control bind:titleClick="handleTitleClick" titles="{{titles}}"></tab-control>
+<view>{{title}}</view>
+
+<!-- 直接获取组件数据/执行方法 -->
+<button bind:tap="counterAdd">counter++</button>
+<select id="select"></select>
+
+<!-- slot插槽 -->
+<my-slot>
+    <button slot="slot1">按钮</button>
+</my-slot>

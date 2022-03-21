@@ -5,7 +5,35 @@ Page({
      * 页面的初始数据
      */
     data: {
+        counter: 0,
+        titles: ["流行", "精选", "新款"],
+        title: '流行'
+    },
+    increment(e) {
+        console.log(e);
+        // console.log('----');
+        this.setData({
+            counter: ++this.data.counter
+        })
+    },
+    handleTitleClick(e) {
+        // console.log(e);
+        this.setData({
+            title: e.detail.title
+        })
+    },
+    counterAdd() {
+        // 获取组件对象
+        const select = this.selectComponent('#select');
+        // console.log(select);
+        // 注：直接通过setData修改组件内部数据，不太合理(不推荐)
+        // select.setData({
+        //     counter: select.data.counter+1
+        // })
 
+        // 推荐: 组件内部暴露出一个接口方法
+        // 可传入参数
+        select.counterAddOne()
     },
 
     /**

@@ -1,0 +1,2 @@
+<!--components/event/event.wxml-->
+<button bindtap="handleAdd1">+1</button>
