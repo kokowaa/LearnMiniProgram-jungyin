@@ -1,4 +1,6 @@
 // pages/about/about.js
+import request from '../../service/network'
+
 Page({
 
     /**
@@ -12,7 +14,24 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        // 1.原生发送网络请求
+        // wx.request({
+        //   url: 'http://152.136.185.210:7878/api/hy66/home/data',
+        //   data: {
+        //       type: 'sell',
+        //       page: 1
+        //   },
+        //   success: function(res) {
+        //       console.log(res);
+        //   }
+        // })
+        request({
+            url: 'http://152.136.185.210:7878/api/hy66/recommend'
+        }).then(res => {
+            console.log(res);
+        }).catch(err => {
+            console.log(err);
+        })
     },
 
     /**
