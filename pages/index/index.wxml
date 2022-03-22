@@ -1,23 +1,16 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<navigator url="/pages/detail/detail">跳到详情页</navigator>
+
+<!-- 跳转方式 -->
+<navigator url="/pages/about/about" open-type="redirect">跳转</navigator>
+<navigator url="/pages/about/about" open-type="reLaunch">跳转</navigator>
+
+<!-- 返回 -->
+<navigator open-type="navigateBack" delta="2">返回</navigator>
+
+<!-- 跳转页面携带数据 -->
+<navigator url="/pages/detail/detail?name=zl&age=23">跳转详情页</navigator>
+<view>{{title}}</view>
+
+<!-- 代码跳转 -->
+<button bind:tap="handleClickTurn">跳转详情页</button>

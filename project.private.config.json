@@ -14,9 +14,10 @@
             "list": [
                 {
                     "name": "pages/about/about",
-                    "pathName": "pages/about/about",
+                    "pathName": "pages/index/index",
                     "query": "",
                     "scene": null,
+                    "launchMode": "default",
                     "partialCompile": {
                         "enabled": false,
                         "pages": [
